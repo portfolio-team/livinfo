@@ -49,5 +49,11 @@
     "*.{ts,tsx}": [
       "prettier --write"
     ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
   }
 }
