@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Artist;
 
 class ArtistController extends Controller
 {
@@ -13,9 +14,9 @@ class ArtistController extends Controller
      */
     public function index()
     {
-        $HelloWorld = 'Hello World';
+        $artist = Artist::all();
         return response()->json(
-            $HelloWorld, 200
+            $artist, 200
         );
     }
 
