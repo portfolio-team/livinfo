@@ -1,15 +1,31 @@
 // import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+type Artist = {
+  id: number;
+  name: string;
+  profile: string;
+  nationality: string;
+  image: string;
+  created_at: string;
+  updated_at: string;
+};
 
 function App() {
+  const [artists, setArtists] = useState<Artist[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/artist/")
+      .then((response) => setArtists(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,6 +35,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <ul>
+          { artists.map((artist: Artist) => <li>{artist.name}</li>)}
+      </ul>
     </div>
   );
 }
