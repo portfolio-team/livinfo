@@ -1,6 +1,6 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
-const LazyArtistList = lazy(() => import('./ArtistList'));
+const LazyArtistList = lazy(() => import('./artist-list'));
 
 const ArtistList = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
   <Suspense fallback={null}>

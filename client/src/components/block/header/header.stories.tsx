@@ -1,5 +1,5 @@
 /* eslint-disable */
-import Header from './Header';
+import Header from './header';
 
 export default {
   title: "Header",

@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom';
-import ArtistList from './ArtistList';
+import ArtistList from './artist-list';
 
 it('It should mount', () => {
   const div = document.createElement('div');
