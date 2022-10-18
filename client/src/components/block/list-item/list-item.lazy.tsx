@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 
-const LazyListItem = lazy(() => import('./ListItem'));
+const LazyListItem = lazy(() => import('./list-item'));
 
 const ListItem = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
   <Suspense fallback={null}>

@@ -1,6 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import ListItem from './ListItem';
+import ListItem from './list-item';
 
 it('It should mount', () => {
   const div = document.createElement('div');
