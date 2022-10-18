@@ -23,10 +23,9 @@ function ArtistList() {
   }, []);
 
   return (
-    <div className="App">
-      <ul>
-          { artists.map((artist: Artist) => <li>{artist.name}</li>)}
-      </ul>
+    <div>
+      <div>
+      </div>
     </div>
   );
 }
