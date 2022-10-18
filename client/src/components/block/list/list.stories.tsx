@@ -1,5 +1,5 @@
 /* eslint-disable */
-import List from './List';
+import List from './list';
 
 export default {
   title: "List",

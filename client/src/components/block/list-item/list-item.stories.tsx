@@ -1,5 +1,5 @@
 /* eslint-disable */
-import ListItem from './ListItem';
+import ListItem from './list-item';
 
 export default {
   title: "ListItem",
