@@ -1,27 +1,27 @@
 // import React from 'react';
 import './App.css';
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState } from "react";
 
-type Artist = {
-  id: number;
-  name: string;
-  profile: string;
-  nationality: string;
-  image: string;
-  created_at: string;
-  updated_at: string;
-};
+// type Artist = {
+//   id: number;
+//   name: string;
+//   profile: string;
+//   nationality: string;
+//   image: string;
+//   created_at: string;
+//   updated_at: string;
+// };
 
 function App() {
-  const [artists, setArtists] = useState<Artist[]>([]);
+  // const [artists, setArtists] = useState<Artist[]>([]);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/artist/")
-      .then((response) => setArtists(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8000/api/artist/")
+  //     .then((response) => setArtists(response.data))
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   return (
     <div className="App">
@@ -35,9 +35,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <ul>
-          { artists.map((artist: Artist) => <li>{artist.name}</li>)}
-      </ul>
     </div>
   );
 }

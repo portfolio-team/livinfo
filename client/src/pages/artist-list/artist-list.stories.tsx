@@ -1,5 +1,5 @@
 /* eslint-disable */
-import ArtistList from './artist-list';
+import { ArtistList } from './artist-list';
 
 export default {
   title: "ArtistList",
