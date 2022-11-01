@@ -2,7 +2,7 @@ import { EntityState, createEntityAdapter } from '@reduxjs/toolkit';
 
 import { Artist } from '../../../models';
 
-export const featureKey = 'todos';
+export const featureKey = 'artists';
 
 export interface State extends EntityState<Artist> {
   isFetching: boolean;

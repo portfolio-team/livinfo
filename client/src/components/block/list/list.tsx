@@ -17,18 +17,13 @@ function List(props: ListProps) {
 
   return (
     <article>
-      <div className="mask">
-        <a href="listItem.image" className="mask-img" title="how-to-build-a-wordpress-website-cover">
-          <img src="listItem.image" alt=""/>
-        </a>
-      </div>
-      {(() => {
-          const items = [];
-          for (let i = 0; i < listItems.length; i++) {
-              items.push(<li><ListItem item={listItems[i]} /></li>)
-          }
-          return <ul>{items}</ul>;
-      })()}
+      <ul className="list-component">
+        {listItems.map((item: Artist) => {
+          return (
+            <li><ListItem item={item} /></li>
+          );
+        })}
+      </ul>
     </article>
   );
 }

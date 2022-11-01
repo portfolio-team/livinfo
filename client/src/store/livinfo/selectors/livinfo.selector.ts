@@ -8,7 +8,7 @@ interface RootState {
 
 const featureStateSelector = (state: RootState) => state[featureKey];
 
-export const { selectAll: todosSelector, selectEntities: entitiesSelector } =
+export const { selectAll: artistsSelector, selectEntities: entitiesSelector } =
   adapter.getSelectors(featureStateSelector);
 
 export const isFetchingSelector = createSelector(
@@ -21,7 +21,7 @@ export const selectedIdSelector = createSelector(
   (state) => state.selectedId
 );
 
-export const todoSelector = createSelector(
+export const artistSelector = createSelector(
   entitiesSelector,
   selectedIdSelector,
   (entities, id) => (id ? entities[id] || null : null)
