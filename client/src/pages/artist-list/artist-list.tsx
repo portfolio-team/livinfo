@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Artist } from '../../models';
 // import styles from './artist-list.module.css';
 import{ artistService } from '../../services';
-
+import List from '../../components/block/list/list';
 // interface ArtistListProps {}
 
 // const ArtistList: FC<ArtistListProps> = () => (
@@ -23,10 +23,8 @@ function ArtistList() {
   }, []);
 
   return (
-    <div className="App">
-      <ul>
-          { artists.map((artist: Artist) => <li>{artist.name}</li>)}
-      </ul>
+    <div>
+      <List items={artists} />
     </div>
   );
 }
