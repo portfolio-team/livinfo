@@ -3,10 +3,11 @@ import { Artist } from '../models';
 const baseUrl = 'http://127.0.0.1:8000'
 
 export class ArtistService {
-  fetchAll(unit?: number): Promise<Artist[]> {
+  fetchAll(unit?: number, limit?: number): Promise<Artist[]> {
     const url = new URL(`${baseUrl}/api/artist`);
     if (unit !== undefined) {
       url.searchParams.append('unit', `${unit}`);
+      url.searchParams.append('limit', `${limit}`);
     }
 
     return fetch(url.toString(), {

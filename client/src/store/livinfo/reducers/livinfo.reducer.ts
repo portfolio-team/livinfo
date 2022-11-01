@@ -2,31 +2,31 @@ import { createReducer } from '@reduxjs/toolkit';
 
 import { initialState, adapter } from '../states';
 import {
-  fetchAllTodos,
-  fetchTodo,
+  fetchAllArtists,
+  fetchArtist,
 } from '../actions';
 
 export const reducer = createReducer(initialState, (builder) =>
   builder
-    .addCase(fetchAllTodos.pending, (state) => {
+    .addCase(fetchAllArtists.pending, (state) => {
       return { ...state, isFetching: true };
     })
-    .addCase(fetchAllTodos.fulfilled, (state, action) => {
-      const { todos } = action.payload;
-      return adapter.setAll({ ...state, isFetching: false }, todos);
+    .addCase(fetchAllArtists.fulfilled, (state, action) => {
+      const { artists } = action.payload;
+      return adapter.setAll({ ...state, isFetching: false }, artists);
     })
-    .addCase(fetchAllTodos.rejected, (state) => {
+    .addCase(fetchAllArtists.rejected, (state) => {
       return { ...state, isFetching: false };
     })
-    .addCase(fetchTodo.pending, (state, action) => {
+    .addCase(fetchArtist.pending, (state, action) => {
       const { id } = action.meta.arg;
       return { ...state, isFetching: true, selectedId: id };
     })
-    .addCase(fetchTodo.fulfilled, (state, action) => {
-      const { todo } = action.payload;
-      return adapter.upsertOne({ ...state, isFetching: false }, todo);
+    .addCase(fetchArtist.fulfilled, (state, action) => {
+      const { artist } = action.payload;
+      return adapter.upsertOne({ ...state, isFetching: false }, artist);
     })
-    .addCase(fetchTodo.rejected, (state) => {
+    .addCase(fetchArtist.rejected, (state) => {
       return { ...state, isFetching: false };
     })
 );

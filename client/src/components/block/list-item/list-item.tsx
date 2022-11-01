@@ -18,8 +18,8 @@ function ListItem(props: ListItemPropsType) {
   return (
     <article>
       <div className="mask">
-        <a href="listItem.image" className="mask-img" title="how-to-build-a-wordpress-website-cover">
-          <img src="listItem.image" alt=""/>
+        <a href={listItem.slug} className="mask-img" title="how-to-build-a-wordpress-website-cover">
+          <img src={listItem.image} alt=""/>
         </a>
       </div>
       <div className="meta">

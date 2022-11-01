@@ -4,10 +4,10 @@ import {
   getDefaultMiddleware,
 } from '@reduxjs/toolkit';
 
-import * as todo from './livinfo';
+import * as infoStore from './livinfo';
 
 const reducer = combineReducers({
-  [todo.featureKey]: todo.reducer,
+  [infoStore.featureKey]: infoStore.reducer,
 });
 
 const middleware = getDefaultMiddleware({
