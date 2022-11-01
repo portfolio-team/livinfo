@@ -1,11 +1,14 @@
-import React, { lazy, Suspense } from 'react';
+// import React, { lazy, Suspense } from 'react';
+// import { Artist } from '../../../models';
 
-const LazyListItem = lazy(() => import('./list-item'));
+// const LazyListItem = lazy(() => import('./list-item'));
 
-const ListItem = (props: JSX.IntrinsicAttributes & { children?: React.ReactNode; }) => (
-  <Suspense fallback={null}>
-    <LazyListItem {...props} />
-  </Suspense>
-);
+// const ArtistItem: Artist = {};
 
-export default ListItem;
+// // const ListItem = (props: ArtistItem) => (
+// //   <Suspense fallback={null}>
+// //     <LazyListItem {...props} />
+// //   </Suspense>
+// // );
+
+export default {};

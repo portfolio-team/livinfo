@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from './list-item.module.css';
+// import styles from './list-item.module.css';
 import { Artist } from '../../../models';
 
 
@@ -17,12 +17,12 @@ function ListItem(props: ListItemPropsType) {
 
   return (
     <article>
-      <div class="mask">
-        <a href="listItem.image" class="mask-img" title="how-to-build-a-wordpress-website-cover">
+      <div className="mask">
+        <a href="listItem.image" className="mask-img" title="how-to-build-a-wordpress-website-cover">
           <img src="listItem.image" alt=""/>
         </a>
       </div>
-      <div class="meta">
+      <div className="meta">
         <div>
           { listItem.name }
         </div>
