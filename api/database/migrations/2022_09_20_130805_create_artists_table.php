@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('artists', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            // $table->string('member');
+            $table->string('slug');
             $table->longText('profile')->nullable();
             $table->string('nationality')->nullable();
             $table->string('image');

@@ -17,23 +17,26 @@ class ArtistSeeder extends Seeder
     {
         Artist::create([
             'name' => 'maneskin',
+            'slug' => 'maneskin',
             'profile' => 'イタリアのバンド',
             'nationality' => 'イタリア',
-            'image' => 'test',
+            'image' => '/assets/Maneskin_2018.jpeg',
         ]);
 
         Artist::create([
             'name' => 'the 1975',
+            'slug' => 'the1975',
             'profile' => 'イギリスのバンド',
             'nationality' => 'イギリス',
-            'image' => 'test',
+            'image' => '/assets/the1975.jpeg',
         ]);
 
         Artist::create([
             'name' => '吉幾三',
+            'slug' => 'yoshiikuzo',
             'profile' => '日本のおじさん',
             'nationality' => '日本',
-            'image' => 'test',
+            'image' => '/assets/yoshiikuzo.jpeg',
         ]);
     }
 }

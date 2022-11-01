@@ -9,6 +9,7 @@ export default {
 const artists: Artist[] = [{
   name: 'default',
   id: 1,
+  slug: 'default',
   profile: 'default',
   members: ['default'],
   nationality: 'default',

@@ -11,8 +11,9 @@ class Artist extends Model
 
     protected $guarded = ['id'];
     protected $fillable = [
-        'name', 
-        'profile', 
+        'name',
+        'slug',
+        'profile',
         'nationality',
         'image',
     ];
