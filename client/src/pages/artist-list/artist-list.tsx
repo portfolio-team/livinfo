@@ -12,7 +12,7 @@ import List from '../../components/block/list/list';
 // );
 
 
-function ArtistList() {
+export const ArtistList:React.VFC =() => {
   const [artists, setArtists] = useState<Artist[]>([]);
   const unit = 10
   useEffect(() => {
@@ -24,6 +24,7 @@ function ArtistList() {
 
   return (
     <div>
+      <p>artistList</p>
       <List items={artists} />
     </div>
   );
