@@ -1,12 +1,36 @@
-import React, { FC } from 'react';
-import styles from './list.module.css';
+// import { FC } from 'react';
+import { useEffect, useState } from "react";
+import { Artist } from '../../../models';
+import ListItem from "../../block/list-item/list-item"
+// import styles from './list.module.css';
 
-interface ListProps {}
+type ListProps = {
+  items: Artist[]
+}
 
-const List: FC<ListProps> = () => (
-  <div className={styles.List}>
-    List Component
-  </div>
-);
+function List(props: ListProps) {
+  const [listItems, setItem] = useState<Artist[]>(props.items);
+
+  useEffect(() => {
+    setItem(props.items)
+  }, []);
+
+  return (
+    <article>
+      <div className="mask">
+        <a href="listItem.image" className="mask-img" title="how-to-build-a-wordpress-website-cover">
+          <img src="listItem.image" alt=""/>
+        </a>
+      </div>
+      {(() => {
+          const items = [];
+          for (let i = 0; i < listItems.length; i++) {
+              items.push(<li><ListItem item={listItems[i]} /></li>)
+          }
+          return <ul>{items}</ul>;
+      })()}
+    </article>
+  );
+}
 
 export default List;
