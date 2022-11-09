@@ -30,7 +30,7 @@ export const useArtistListFacade = (arg: { offset?: number; limit?: number }) =>
       params.set('offset', `${offset}`);
       navigate(`/artists?${params}`);
     },
-    [history, location.search]
+    [navigate, location.search]
   );
 
   const changeLimit = useCallback(
@@ -39,7 +39,7 @@ export const useArtistListFacade = (arg: { offset?: number; limit?: number }) =>
       params.set('limit', `${limit}`);
       navigate(`/artists?${params}`);
     },
-    [history, location.search]
+    [navigate, location.search]
   );
 
   useEffect(() => {
